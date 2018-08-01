@@ -1,12 +1,13 @@
 var path = require('path');
 var express = require('express');
+var cors = require('cors');
 
 var PORT = 3000;
 var STATIC_URL = path.resolve(__dirname, './public/');
 var IMAGE_URLS = [1,2,3,4,5,6,7,8].map(function(n){ return 'http://ece.ubc.ca/~kumseok/src/vsp2018/images/image'+n+'.jpg' })
 
 var app = express();	// create an express app
-
+app.use(cors());
 // print some info on incoming request
 app.use(function printRequest(req, res, next){
 	console.log('['+(new Date()).toLocaleString()+'] Received '+req.method+' at '+req.originalUrl);
