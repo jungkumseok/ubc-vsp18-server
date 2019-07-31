@@ -3,7 +3,7 @@ var express = require('express');
 
 var PORT = 3000;
 var STATIC_URL = path.resolve(__dirname, './public/');
-var IMAGE_URLS = [1,2,3,4,5,6,7,8].map(function(n){ return 'http://ece.ubc.ca/~kumseok/src/vsp2018/images/image'+n+'.jpg' })
+var IMAGE_URLS = [1,2,3,4,5,6,7,8].map(function(n){ return 'http://ece.ubc.ca/~kumseok/src/vsp19/images/image'+n+'.jpg' })
 
 var app = express();	// create an express app
 
